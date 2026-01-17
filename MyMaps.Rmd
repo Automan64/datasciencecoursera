@@ -1,0 +1,24 @@
+---
+title: "Maps"
+author: "Massimo Neri"
+date: "2026-01-17"
+output: html_document
+---
+
+# 2023-01-17
+
+## Leaflet Maps
+
+This is a generic Map with speed of the cars 
+
+```{r cars}
+library(leaflet)
+summary(cars)
+set.seed(2026-01-17)
+cars$lat <- runif(50, min = 39.2, max = 39.3)
+cars$lng <- runif(50, min = -76.6, max = -76.5)
+cars %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions())
+```
