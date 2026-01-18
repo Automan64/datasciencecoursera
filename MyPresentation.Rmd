@@ -1,0 +1,32 @@
+---
+title: "MyPresentation"
+author: "Massimo"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+## R Markdown
+
+This is my submission with Rmarkdown and Plotly.
+
+## Slide with R Output
+
+
+```{r , include=FALSE}
+library(plotly)
+```
+
+```{r cars, echo = FALSE}
+print("Maximum speed")
+max(cars$speed)
+summary(cars$speed)
+```
+
+## Slide with Plot_ly by speed
+
+```{r echo = FALSE}
+
+plot_ly(x = ~cars$speed, y = ~cars$dist, 
+        type = "box")
+```
+
